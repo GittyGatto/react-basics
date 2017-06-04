@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import Projects from './components/Projects';
-import Planes from './components/Planes';
 
 
 
 class App extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      planes: [
-        {
+      projects: [{
           name: 'P-51 Mustang',
           designer: 'Edgar Schmued'
         },
@@ -30,12 +28,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className = "App" >
 
-        <h1>React Basics</h1>
+      <h1> React Basics </h1>
 
-        <Projects test="Test Test" />
-        <Planes />
+      <Projects projects={this.state.projects} />
+
 
       </div>
     );

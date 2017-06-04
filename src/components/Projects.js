@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-//import Planes from './components/Planes';
+import ProjectItems from './ProjectItems';
 
-class Project extends Component {
+class Projects extends Component {
   render() {
 
-    let planes;
-    if (this.props.planes){
-      planes = this.props.planes.map(plane => {
-         console.log(plane);
-      });
-    }
+let projectItems;
+if(this.props.projects){
+  projectItems = this.props.projects.map(project =>{
+  return(
+      <ProjectItems key={project.name} project = {project}/>
+  );
+  });
+}
+
+
 
 
 
     return (
       <div className="Project">
-                    <h2>Project Component</h2>
-                    <p>{this.props.test}</p>
+          <h2>My Projects Component</h2>
+          {projectItems}
       </div>
     );
   }
 }
 
-export default Project;
+export default Projects;
