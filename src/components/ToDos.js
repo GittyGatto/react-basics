@@ -16,6 +16,7 @@ class ToDos extends Component {
     return (
 
       <div className="Todo">
+      <hr />
       <h2>My toDo list</h2>
       {toDoItems}
       </div>
