@@ -67,4 +67,10 @@
         }
     }
 
+    AddProject.propTypes ={
+      category: React.PropTypes.array,
+      project:  React.PropTypes.object,
+      adProject: React.PropTypes.func
+    }
+
     export default AddProject;
